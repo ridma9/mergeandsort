@@ -1,5 +1,7 @@
 import com.mergeandsort.MergeArray;
+import com.mergeandsort.MergeArray2;
 import com.mergeandsort.SortArray;
+import com.mergeandsort.SortArray2;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,8 +10,8 @@ public class Main {
         int [] array2={9,8,7,25};
         int [] array3={15,25,13,19,11};
 
-        MergeArray mergeAndSort=new MergeArray();
-        int [] mergedarray=mergeAndSort.merge(array1,array2,array3);
+        MergeArray2 mergeAndSort=new MergeArray2(array1,array2,array3);
+        int [] mergedarray=mergeAndSort.merge();
         System.out.print("Merged Array : ");
         for (int num:mergedarray) {
             System.out.print("  "+num);
@@ -17,8 +19,8 @@ public class Main {
 
         System.out.println();
         System.out.print("Sorted Array : ");
-        SortArray newSort = new SortArray();
-        int [] finalarray = newSort.newSort(mergedarray);
+        SortArray2 newSort = new SortArray2(mergedarray);
+        int [] finalarray = newSort.newSort();
 
         for (int num:finalarray) {
             System.out.print("  "+num);

@@ -1,17 +1,30 @@
 package com.mergeandsort;
 
-public class SortArray {
+public class SortArray2 {
+    private int []array;
 
-    public int[] newSort(int array[]){
+    public SortArray2(int array[]){
+        this.array=array;
+    }
 
-        for (int i=0;i< array.length;i++){
+    public int[] getArray() {
+        return array;
+    }
 
-            for (int j=i;j< array.length;j++){
+    public void setArray(int[] array) {
+        this.array = array;
+    }
 
-                if (array[i]<=array[j]){
-                    int x=array[i];
-                    array[i]=array[j];
-                    array[j]=x;
+    public int[] newSort(){
+
+        for (int i=0;i< this.array.length;i++){
+
+            for (int j=i;j< this.array.length;j++){
+
+                if (this.array[i]<=this.array[j]){
+                    int x=this.array[i];
+                    this.array[i]=this.array[j];
+                    this.array[j]=x;
 
                 }
             }
